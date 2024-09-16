@@ -6,6 +6,7 @@
 //                 Jason Kwok <https://github.com/JasonHK>
 //                 Brad Zacher <https://github.com/bradzacher>
 //                 JounQin <https://github.com/JounQin>
+//                 GP <https://github.com/paambaati>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference path="helpers.d.ts" />
@@ -909,6 +910,10 @@ export class RuleTester {
     static only(
         item: string | RuleTester.ValidTestCase | RuleTester.InvalidTestCase,
     ): RuleTester.ValidTestCase | RuleTester.InvalidTestCase;
+
+    static describe(): (text: string, method: Function);
+
+    static it(): (text: string, method: Function);
 }
 
 export namespace RuleTester {
